@@ -1,0 +1,231 @@
+:root {
+    --max-w: 1100px;
+    --accent: #0b6e4f;
+    --muted: #666;
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    color: #222;
+    line-height: 1.45;
+}
+
+.container {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 16px;
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+.site-header {
+    background: #0b6e4f;
+    color: #fff;
+    padding: 15px 0;
+}
+
+.site-title {
+    margin: 0;
+    font-size: 20px,
+}
+
+.nav a {
+    color: #fff;
+    margin-left: 16px;
+    text-decoration: none
+}
+
+.hero {
+    background: #f3f7f5;
+    padding: 32px;
+    margin-bottom: 16PX;
+}
+
+.small-hero {
+    padding: 20px;
+}
+
+.main-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.feature {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.feature-img {
+    width: 220px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.tourist-spots .card {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06)
+}
+
+.card img {
+    width: 160px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.card-body h4 {
+    margin: 4px;
+}
+
+.hashtags {
+    color: var(--muted);
+    font-size: 14.4px;
+}
+
+.products-header {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.products-feature-img {
+    width: 140px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.product .price {
+    font-weight: 700
+}
+
+.actions {
+    margin-top: 80px;
+}
+
+.actions button {
+    padding: 6.4px 9.6px;
+    border: 0;
+    border-radius: 6px;
+    cursor: pointer
+}
+
+.add-btn {
+    background: var(--accent);
+    color: #fff
+}
+
+.remove-btn {
+    background: #eee
+}
+
+.cart-summary {
+    margin-top: 12px;
+    padding: 9.6px;
+    background: #fafafa;
+    border-radius: 6px
+}
+
+.site-footer {
+    background: #f2f2f2;
+    padding: 16px;
+    margin-top: 20px;
+}
+
+.muted {
+    color: var(--muted)
+}
+
+
+/* Responsive */
+
+@media (max-width:900px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr)
+    }
+    .card img {
+        width: 120px;
+    }
+}
+
+@media (max-width:600px) {
+    .header-inner {
+        flex-direction: column;
+        gap: 80px;
+    }
+    .products-header {
+        flex-direction: column
+    }
+    .product-grid {
+        grid-template-columns: 1fr
+    }
+}
+
+.map-section {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.map-container {
+    margin-top: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.site-footer {
+    background: #f2f2f2;
+    padding: 6px 10px;
+    /* binawasan ang taas at gilid */
+    margin-top: 12px;
+    font-size: 13px;
+    /* mas maliit na font */
+    line-height: 1.2;
+    /* mas dikit ang mga linya */
+}
+
+.footer-inner {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.footer-info h4 {
+    margin: 0;
+    /* alisin extra space */
+    font-size: 13px;
+    color: #0b6e4f;
+}
+
+.footer-info p {
+    margin: 0;
+    /* para hindi lumaki ang height */
+}
